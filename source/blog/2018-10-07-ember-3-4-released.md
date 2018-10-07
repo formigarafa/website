@@ -28,7 +28,7 @@ The 3.4.0 release is an Ember.js Long-Term Support candidate. In six weeks, the 
 
 For more information about Ember's LTS policies, see the [announcement blog post](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html) and [builds page](http://emberjs.com/builds/).
 
-Ember.js 3.4 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is one (1) new feature, three (3) deprecations, and eight (8) bugfixes in this version.
+Ember.js 3.4 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is one (2) new feature, three (3) deprecations, and eight (8) bugfixes in this version.
 
 #### New Features (2)
 
@@ -39,7 +39,7 @@ In Ember 3.4 it is now possible to use angle bracket invocation. This means that
 ```hbs
 {{site-header user=this.user class=(if this.user.isAdmin "admin")}}
 
-{{#super-select selected=this.user.country as |option|}}
+{{#super-select selected=this.user.country as |s|}}
   {{#each this.availableCountries as |country|}}
     {{#s.option value=country}}{{country.name}}{{/s.option}}
   {{/each}}
